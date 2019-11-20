@@ -43,23 +43,28 @@ public class Cafetera {
 	
 	public void llenarCafetera(){
 		this._capacidadActual = _capacidadMaxima;
+		System.out.println("cafetera llenada: "+_capacidadActual);
 	}
 	
 	public void servirTaza(int servir) {
 		if (servir <= _capacidadActual) {
 			this._capacidadActual = _capacidadActual - servir;
+			System.out.println("cafe dsiponible: "+_capacidadActual);
 		}else {
 			servir = _capacidadActual;
 			this._capacidadActual = _capacidadActual - servir;
+			System.out.println("cafe dsiponible: "+_capacidadActual);
 		}
 	}
 	
 	public void vaciarCafetera() {
 		this._capacidadActual = 0;
+		System.out.println("la cafetera esta vacia");
 	}
 	
 	public void agreagarCafe(int llenar) {
 		this._capacidadActual = _capacidadActual + llenar;
+		System.out.println("cafe disponible: "+_capacidadActual);
 	}
 
 }
